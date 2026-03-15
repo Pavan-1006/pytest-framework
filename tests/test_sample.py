@@ -15,5 +15,5 @@ def test_add(calc,a,b,expected):
 def test_add_multiple(calc):
     assert calc.add(10, 20) == 30
 
-def test_subtract(calc):
+def test_sub(calc):
     assert calc.subtract(10, 20) == 30
