@@ -1,0 +1,989 @@
+2026-03-03 18:23:20,113 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:23:20,114 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:23:20,116 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:23:20,116 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:23:20,118 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:23:20,118 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:27:50,022 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:27:50,023 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:27:50,025 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:27:50,026 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:27:50,075 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:27:50,075 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:28:25,691 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:28:25,691 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:28:25,693 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:28:25,693 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:28:25,742 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:28:25,742 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:29:58,661 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:29:58,661 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:29:58,663 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:29:58,663 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:29:58,711 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:29:58,712 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:32:57,522 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:32:57,523 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:32:57,525 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:32:57,525 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:32:57,576 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:32:57,576 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:33:43,209 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:33:43,209 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:33:43,211 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:33:43,211 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:33:43,258 - ERROR - failure_logger - Test Failed: test_add[10-20-5]
+2026-03-03 18:33:43,258 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[10-20-5]
+2026-03-03 18:33:43,258 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x00000239FFAD7750>, a = 10, b = 20
+expected = 5
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize(
+        "a,b,expected",
+        [(2, 3, 5),
+        (10, 20,5),
+        (0, 5, 5)]
+    )
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       assert 30 == 5
+
+tests\test_sample.py:17: AssertionError
+2026-03-03 18:33:43,262 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:33:43,262 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:35:55,803 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:35:55,804 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:35:55,805 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:35:55,805 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:35:55,849 - ERROR - failure_logger - Test Failed: test_add[10-20-50]
+2026-03-03 18:35:55,849 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[10-20-50]
+2026-03-03 18:35:55,850 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000028522447750>, a = 10, b = 20
+expected = 50
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize(
+        "a,b,expected",
+        [(2, 3, 5),
+        (10, 20,50),
+        (0, 5, 5)]
+    )
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       assert 30 == 50
+
+tests\test_sample.py:17: AssertionError
+2026-03-03 18:35:55,851 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:35:55,851 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:36:18,192 - INFO - test_sample - Testing add with 2 and 3
+2026-03-03 18:36:18,192 - INFO - test_sample - Result obtained: 5
+2026-03-03 18:36:18,193 - INFO - test_sample - Testing add with 10 and 20
+2026-03-03 18:36:18,193 - INFO - test_sample - Result obtained: 30
+2026-03-03 18:36:18,195 - INFO - test_sample - Testing add with 0 and 5
+2026-03-03 18:36:18,195 - INFO - test_sample - Result obtained: 5
+2026-03-04 22:32:01,325 - INFO - test_sample - Testing add with 2 and 11
+2026-03-04 22:32:01,326 - INFO - test_sample - Result obtained: 13
+2026-03-04 22:32:01,456 - ERROR - failure_logger - Test Failed: test_add[2-11-=A2+B2]
+2026-03-04 22:32:01,456 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[2-11-=A2+B2]
+2026-03-04 22:32:01,457 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C920050>, a = 2, b = 11
+expected = '=A2+B2'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 13 == '=A2+B2'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,460 - INFO - test_sample - Testing add with 3 and 12
+2026-03-04 22:32:01,460 - INFO - test_sample - Result obtained: 15
+2026-03-04 22:32:01,464 - ERROR - failure_logger - Test Failed: test_add[3-12-=A3+B3]
+2026-03-04 22:32:01,464 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[3-12-=A3+B3]
+2026-03-04 22:32:01,464 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C7DF9D0>, a = 3, b = 12
+expected = '=A3+B3'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 15 == '=A3+B3'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,467 - INFO - test_sample - Testing add with 4 and 13
+2026-03-04 22:32:01,467 - INFO - test_sample - Result obtained: 17
+2026-03-04 22:32:01,469 - ERROR - failure_logger - Test Failed: test_add[4-13-=A4+B4]
+2026-03-04 22:32:01,470 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[4-13-=A4+B4]
+2026-03-04 22:32:01,472 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C7DF750>, a = 4, b = 13
+expected = '=A4+B4'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 17 == '=A4+B4'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,488 - INFO - test_sample - Testing add with 5 and 14
+2026-03-04 22:32:01,488 - INFO - test_sample - Result obtained: 19
+2026-03-04 22:32:01,493 - ERROR - failure_logger - Test Failed: test_add[5-14-=A5+B5]
+2026-03-04 22:32:01,494 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[5-14-=A5+B5]
+2026-03-04 22:32:01,494 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C8BD6E0>, a = 5, b = 14
+expected = '=A5+B5'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 19 == '=A5+B5'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,500 - INFO - test_sample - Testing add with 6 and 15
+2026-03-04 22:32:01,500 - INFO - test_sample - Result obtained: 21
+2026-03-04 22:32:01,506 - ERROR - failure_logger - Test Failed: test_add[6-15-=A6+B6]
+2026-03-04 22:32:01,506 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[6-15-=A6+B6]
+2026-03-04 22:32:01,507 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C8BD940>, a = 6, b = 15
+expected = '=A6+B6'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 21 == '=A6+B6'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,512 - INFO - test_sample - Testing add with 7 and 16
+2026-03-04 22:32:01,512 - INFO - test_sample - Result obtained: 23
+2026-03-04 22:32:01,517 - ERROR - failure_logger - Test Failed: test_add[7-16-=A7+B7]
+2026-03-04 22:32:01,517 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[7-16-=A7+B7]
+2026-03-04 22:32:01,518 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C8C27B0>, a = 7, b = 16
+expected = '=A7+B7'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 23 == '=A7+B7'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,522 - INFO - test_sample - Testing add with 8 and 17
+2026-03-04 22:32:01,522 - INFO - test_sample - Result obtained: 25
+2026-03-04 22:32:01,528 - ERROR - failure_logger - Test Failed: test_add[8-17-=A8+B8]
+2026-03-04 22:32:01,528 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[8-17-=A8+B8]
+2026-03-04 22:32:01,528 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C89F240>, a = 8, b = 17
+expected = '=A8+B8'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 25 == '=A8+B8'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,534 - INFO - test_sample - Testing add with 9 and 18
+2026-03-04 22:32:01,534 - INFO - test_sample - Result obtained: 27
+2026-03-04 22:32:01,539 - ERROR - failure_logger - Test Failed: test_add[9-18-=A9+B9]
+2026-03-04 22:32:01,539 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[9-18-=A9+B9]
+2026-03-04 22:32:01,539 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C89E250>, a = 9, b = 18
+expected = '=A9+B9'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 27 == '=A9+B9'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,544 - INFO - test_sample - Testing add with 10 and 19
+2026-03-04 22:32:01,544 - INFO - test_sample - Result obtained: 29
+2026-03-04 22:32:01,550 - ERROR - failure_logger - Test Failed: test_add[10-19-=A10+B10]
+2026-03-04 22:32:01,550 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[10-19-=A10+B10]
+2026-03-04 22:32:01,550 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C942A50>, a = 10, b = 19
+expected = '=A10+B10'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 29 == '=A10+B10'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,553 - INFO - test_sample - Testing add with 11 and 20
+2026-03-04 22:32:01,553 - INFO - test_sample - Result obtained: 31
+2026-03-04 22:32:01,557 - ERROR - failure_logger - Test Failed: test_add[11-20-=A11+B11]
+2026-03-04 22:32:01,558 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[11-20-=A11+B11]
+2026-03-04 22:32:01,558 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C943450>, a = 11, b = 20
+expected = '=A11+B11'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 31 == '=A11+B11'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,562 - INFO - test_sample - Testing add with 12 and 21
+2026-03-04 22:32:01,562 - INFO - test_sample - Result obtained: 33
+2026-03-04 22:32:01,567 - ERROR - failure_logger - Test Failed: test_add[12-21-=A12+B12]
+2026-03-04 22:32:01,567 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[12-21-=A12+B12]
+2026-03-04 22:32:01,568 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C98A210>, a = 12, b = 21
+expected = '=A12+B12'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 33 == '=A12+B12'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,571 - INFO - test_sample - Testing add with 13 and 22
+2026-03-04 22:32:01,571 - INFO - test_sample - Result obtained: 35
+2026-03-04 22:32:01,576 - ERROR - failure_logger - Test Failed: test_add[13-22-=A13+B13]
+2026-03-04 22:32:01,576 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[13-22-=A13+B13]
+2026-03-04 22:32:01,576 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C98AE40>, a = 13, b = 22
+expected = '=A13+B13'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 35 == '=A13+B13'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,580 - INFO - test_sample - Testing add with 14 and 23
+2026-03-04 22:32:01,580 - INFO - test_sample - Result obtained: 37
+2026-03-04 22:32:01,583 - ERROR - failure_logger - Test Failed: test_add[14-23-=A14+B14]
+2026-03-04 22:32:01,584 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[14-23-=A14+B14]
+2026-03-04 22:32:01,584 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C8F2970>, a = 14, b = 23
+expected = '=A14+B14'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 37 == '=A14+B14'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,588 - INFO - test_sample - Testing add with 15 and 24
+2026-03-04 22:32:01,588 - INFO - test_sample - Result obtained: 39
+2026-03-04 22:32:01,593 - ERROR - failure_logger - Test Failed: test_add[15-24-=A15+B15]
+2026-03-04 22:32:01,593 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[15-24-=A15+B15]
+2026-03-04 22:32:01,593 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C8F2B30>, a = 15, b = 24
+expected = '=A15+B15'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 39 == '=A15+B15'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,597 - INFO - test_sample - Testing add with 16 and 25
+2026-03-04 22:32:01,597 - INFO - test_sample - Result obtained: 41
+2026-03-04 22:32:01,602 - ERROR - failure_logger - Test Failed: test_add[16-25-=A16+B16]
+2026-03-04 22:32:01,602 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[16-25-=A16+B16]
+2026-03-04 22:32:01,602 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C85BBA0>, a = 16, b = 25
+expected = '=A16+B16'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 41 == '=A16+B16'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,606 - INFO - test_sample - Testing add with 17 and 26
+2026-03-04 22:32:01,607 - INFO - test_sample - Result obtained: 43
+2026-03-04 22:32:01,610 - ERROR - failure_logger - Test Failed: test_add[17-26-=A17+B17]
+2026-03-04 22:32:01,610 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[17-26-=A17+B17]
+2026-03-04 22:32:01,611 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C727F50>, a = 17, b = 26
+expected = '=A17+B17'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 43 == '=A17+B17'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:32:01,615 - INFO - test_sample - Testing add with 18 and 27
+2026-03-04 22:32:01,615 - INFO - test_sample - Result obtained: 45
+2026-03-04 22:32:01,619 - ERROR - failure_logger - Test Failed: test_add[18-27-=A18+B18]
+2026-03-04 22:32:01,619 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[18-27-=A18+B18]
+2026-03-04 22:32:01,620 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000011F6C934050>, a = 18, b = 27
+expected = '=A18+B18'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 45 == '=A18+B18'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,327 - INFO - test_sample - Testing add with 2 and 11
+2026-03-04 22:33:09,327 - INFO - test_sample - Result obtained: 13
+2026-03-04 22:33:09,477 - ERROR - failure_logger - Test Failed: test_add[2-11-=A2+B2]
+2026-03-04 22:33:09,478 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[2-11-=A2+B2]
+2026-03-04 22:33:09,478 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D8E0050>, a = 2, b = 11
+expected = '=A2+B2'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 13 == '=A2+B2'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,483 - INFO - test_sample - Testing add with 3 and 12
+2026-03-04 22:33:09,483 - INFO - test_sample - Result obtained: 15
+2026-03-04 22:33:09,488 - ERROR - failure_logger - Test Failed: test_add[3-12-=A3+B3]
+2026-03-04 22:33:09,488 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[3-12-=A3+B3]
+2026-03-04 22:33:09,488 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D7AF610>, a = 3, b = 12
+expected = '=A3+B3'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 15 == '=A3+B3'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,493 - INFO - test_sample - Testing add with 4 and 13
+2026-03-04 22:33:09,493 - INFO - test_sample - Result obtained: 17
+2026-03-04 22:33:09,497 - ERROR - failure_logger - Test Failed: test_add[4-13-=A4+B4]
+2026-03-04 22:33:09,497 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[4-13-=A4+B4]
+2026-03-04 22:33:09,497 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D8E8910>, a = 4, b = 13
+expected = '=A4+B4'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 17 == '=A4+B4'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,510 - INFO - test_sample - Testing add with 5 and 14
+2026-03-04 22:33:09,510 - INFO - test_sample - Result obtained: 19
+2026-03-04 22:33:09,514 - ERROR - failure_logger - Test Failed: test_add[5-14-=A5+B5]
+2026-03-04 22:33:09,514 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[5-14-=A5+B5]
+2026-03-04 22:33:09,514 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D87D6E0>, a = 5, b = 14
+expected = '=A5+B5'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 19 == '=A5+B5'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,518 - INFO - test_sample - Testing add with 6 and 15
+2026-03-04 22:33:09,518 - INFO - test_sample - Result obtained: 21
+2026-03-04 22:33:09,523 - ERROR - failure_logger - Test Failed: test_add[6-15-=A6+B6]
+2026-03-04 22:33:09,523 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[6-15-=A6+B6]
+2026-03-04 22:33:09,523 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D87D940>, a = 6, b = 15
+expected = '=A6+B6'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 21 == '=A6+B6'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,529 - INFO - test_sample - Testing add with 7 and 16
+2026-03-04 22:33:09,530 - INFO - test_sample - Result obtained: 23
+2026-03-04 22:33:09,533 - ERROR - failure_logger - Test Failed: test_add[7-16-=A7+B7]
+2026-03-04 22:33:09,533 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[7-16-=A7+B7]
+2026-03-04 22:33:09,534 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D8827B0>, a = 7, b = 16
+expected = '=A7+B7'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 23 == '=A7+B7'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,538 - INFO - test_sample - Testing add with 8 and 17
+2026-03-04 22:33:09,538 - INFO - test_sample - Result obtained: 25
+2026-03-04 22:33:09,542 - ERROR - failure_logger - Test Failed: test_add[8-17-=A8+B8]
+2026-03-04 22:33:09,543 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[8-17-=A8+B8]
+2026-03-04 22:33:09,543 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D85F240>, a = 8, b = 17
+expected = '=A8+B8'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 25 == '=A8+B8'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,547 - INFO - test_sample - Testing add with 9 and 18
+2026-03-04 22:33:09,547 - INFO - test_sample - Result obtained: 27
+2026-03-04 22:33:09,551 - ERROR - failure_logger - Test Failed: test_add[9-18-=A9+B9]
+2026-03-04 22:33:09,551 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[9-18-=A9+B9]
+2026-03-04 22:33:09,551 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D85E250>, a = 9, b = 18
+expected = '=A9+B9'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 27 == '=A9+B9'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,556 - INFO - test_sample - Testing add with 10 and 19
+2026-03-04 22:33:09,557 - INFO - test_sample - Result obtained: 29
+2026-03-04 22:33:09,562 - ERROR - failure_logger - Test Failed: test_add[10-19-=A10+B10]
+2026-03-04 22:33:09,562 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[10-19-=A10+B10]
+2026-03-04 22:33:09,562 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D906A50>, a = 10, b = 19
+expected = '=A10+B10'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 29 == '=A10+B10'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,567 - INFO - test_sample - Testing add with 11 and 20
+2026-03-04 22:33:09,567 - INFO - test_sample - Result obtained: 31
+2026-03-04 22:33:09,571 - ERROR - failure_logger - Test Failed: test_add[11-20-=A11+B11]
+2026-03-04 22:33:09,571 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[11-20-=A11+B11]
+2026-03-04 22:33:09,571 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D907450>, a = 11, b = 20
+expected = '=A11+B11'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 31 == '=A11+B11'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,574 - INFO - test_sample - Testing add with 12 and 21
+2026-03-04 22:33:09,575 - INFO - test_sample - Result obtained: 33
+2026-03-04 22:33:09,580 - ERROR - failure_logger - Test Failed: test_add[12-21-=A12+B12]
+2026-03-04 22:33:09,580 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[12-21-=A12+B12]
+2026-03-04 22:33:09,580 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D94A210>, a = 12, b = 21
+expected = '=A12+B12'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 33 == '=A12+B12'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,584 - INFO - test_sample - Testing add with 13 and 22
+2026-03-04 22:33:09,584 - INFO - test_sample - Result obtained: 35
+2026-03-04 22:33:09,589 - ERROR - failure_logger - Test Failed: test_add[13-22-=A13+B13]
+2026-03-04 22:33:09,590 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[13-22-=A13+B13]
+2026-03-04 22:33:09,590 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D94AE40>, a = 13, b = 22
+expected = '=A13+B13'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 35 == '=A13+B13'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,595 - INFO - test_sample - Testing add with 14 and 23
+2026-03-04 22:33:09,596 - INFO - test_sample - Result obtained: 37
+2026-03-04 22:33:09,601 - ERROR - failure_logger - Test Failed: test_add[14-23-=A14+B14]
+2026-03-04 22:33:09,601 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[14-23-=A14+B14]
+2026-03-04 22:33:09,601 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D8B2970>, a = 14, b = 23
+expected = '=A14+B14'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 37 == '=A14+B14'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,607 - INFO - test_sample - Testing add with 15 and 24
+2026-03-04 22:33:09,607 - INFO - test_sample - Result obtained: 39
+2026-03-04 22:33:09,610 - ERROR - failure_logger - Test Failed: test_add[15-24-=A15+B15]
+2026-03-04 22:33:09,610 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[15-24-=A15+B15]
+2026-03-04 22:33:09,610 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D8B2B30>, a = 15, b = 24
+expected = '=A15+B15'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 39 == '=A15+B15'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,614 - INFO - test_sample - Testing add with 16 and 25
+2026-03-04 22:33:09,614 - INFO - test_sample - Result obtained: 41
+2026-03-04 22:33:09,619 - ERROR - failure_logger - Test Failed: test_add[16-25-=A16+B16]
+2026-03-04 22:33:09,620 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[16-25-=A16+B16]
+2026-03-04 22:33:09,620 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D81BBA0>, a = 16, b = 25
+expected = '=A16+B16'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 41 == '=A16+B16'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,623 - INFO - test_sample - Testing add with 17 and 26
+2026-03-04 22:33:09,623 - INFO - test_sample - Result obtained: 43
+2026-03-04 22:33:09,625 - ERROR - failure_logger - Test Failed: test_add[17-26-=A17+B17]
+2026-03-04 22:33:09,625 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[17-26-=A17+B17]
+2026-03-04 22:33:09,626 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D6E3F50>, a = 17, b = 26
+expected = '=A17+B17'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 43 == '=A17+B17'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:33:09,630 - INFO - test_sample - Testing add with 18 and 27
+2026-03-04 22:33:09,631 - INFO - test_sample - Result obtained: 45
+2026-03-04 22:33:09,635 - ERROR - failure_logger - Test Failed: test_add[18-27-=A18+B18]
+2026-03-04 22:33:09,636 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[18-27-=A18+B18]
+2026-03-04 22:33:09,636 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x0000021E8D8F8050>, a = 18, b = 27
+expected = '=A18+B18'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 45 == '=A18+B18'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,152 - INFO - test_sample - Testing add with 2 and 11
+2026-03-04 22:35:34,153 - INFO - test_sample - Result obtained: 13
+2026-03-04 22:35:34,289 - ERROR - failure_logger - Test Failed: test_add[2-11-=A2+B2]
+2026-03-04 22:35:34,289 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[2-11-=A2+B2]
+2026-03-04 22:35:34,289 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B99C050>, a = 2, b = 11
+expected = '=A2+B2'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 13 == '=A2+B2'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,293 - INFO - test_sample - Testing add with 3 and 12
+2026-03-04 22:35:34,293 - INFO - test_sample - Result obtained: 15
+2026-03-04 22:35:34,296 - ERROR - failure_logger - Test Failed: test_add[3-12-=A3+B3]
+2026-03-04 22:35:34,296 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[3-12-=A3+B3]
+2026-03-04 22:35:34,296 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B853610>, a = 3, b = 12
+expected = '=A3+B3'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 15 == '=A3+B3'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,299 - INFO - test_sample - Testing add with 4 and 13
+2026-03-04 22:35:34,299 - INFO - test_sample - Result obtained: 17
+2026-03-04 22:35:34,301 - ERROR - failure_logger - Test Failed: test_add[4-13-=A4+B4]
+2026-03-04 22:35:34,302 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[4-13-=A4+B4]
+2026-03-04 22:35:34,302 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B9A4910>, a = 4, b = 13
+expected = '=A4+B4'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 17 == '=A4+B4'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,306 - INFO - test_sample - Testing add with 5 and 14
+2026-03-04 22:35:34,307 - INFO - test_sample - Result obtained: 19
+2026-03-04 22:35:34,310 - ERROR - failure_logger - Test Failed: test_add[5-14-=A5+B5]
+2026-03-04 22:35:34,310 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[5-14-=A5+B5]
+2026-03-04 22:35:34,311 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B93D6E0>, a = 5, b = 14
+expected = '=A5+B5'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 19 == '=A5+B5'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,314 - INFO - test_sample - Testing add with 6 and 15
+2026-03-04 22:35:34,314 - INFO - test_sample - Result obtained: 21
+2026-03-04 22:35:34,319 - ERROR - failure_logger - Test Failed: test_add[6-15-=A6+B6]
+2026-03-04 22:35:34,319 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[6-15-=A6+B6]
+2026-03-04 22:35:34,319 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B93D940>, a = 6, b = 15
+expected = '=A6+B6'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 21 == '=A6+B6'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,323 - INFO - test_sample - Testing add with 7 and 16
+2026-03-04 22:35:34,323 - INFO - test_sample - Result obtained: 23
+2026-03-04 22:35:34,326 - ERROR - failure_logger - Test Failed: test_add[7-16-=A7+B7]
+2026-03-04 22:35:34,327 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[7-16-=A7+B7]
+2026-03-04 22:35:34,327 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B9427B0>, a = 7, b = 16
+expected = '=A7+B7'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 23 == '=A7+B7'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,330 - INFO - test_sample - Testing add with 8 and 17
+2026-03-04 22:35:34,330 - INFO - test_sample - Result obtained: 25
+2026-03-04 22:35:34,332 - ERROR - failure_logger - Test Failed: test_add[8-17-=A8+B8]
+2026-03-04 22:35:34,332 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[8-17-=A8+B8]
+2026-03-04 22:35:34,333 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B91F240>, a = 8, b = 17
+expected = '=A8+B8'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 25 == '=A8+B8'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,336 - INFO - test_sample - Testing add with 9 and 18
+2026-03-04 22:35:34,336 - INFO - test_sample - Result obtained: 27
+2026-03-04 22:35:34,341 - ERROR - failure_logger - Test Failed: test_add[9-18-=A9+B9]
+2026-03-04 22:35:34,341 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[9-18-=A9+B9]
+2026-03-04 22:35:34,341 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B91E250>, a = 9, b = 18
+expected = '=A9+B9'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 27 == '=A9+B9'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,344 - INFO - test_sample - Testing add with 10 and 19
+2026-03-04 22:35:34,345 - INFO - test_sample - Result obtained: 29
+2026-03-04 22:35:34,347 - ERROR - failure_logger - Test Failed: test_add[10-19-=A10+B10]
+2026-03-04 22:35:34,347 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[10-19-=A10+B10]
+2026-03-04 22:35:34,348 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B9C2A50>, a = 10, b = 19
+expected = '=A10+B10'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 29 == '=A10+B10'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,350 - INFO - test_sample - Testing add with 11 and 20
+2026-03-04 22:35:34,350 - INFO - test_sample - Result obtained: 31
+2026-03-04 22:35:34,354 - ERROR - failure_logger - Test Failed: test_add[11-20-=A11+B11]
+2026-03-04 22:35:34,354 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[11-20-=A11+B11]
+2026-03-04 22:35:34,354 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B9C3450>, a = 11, b = 20
+expected = '=A11+B11'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 31 == '=A11+B11'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,358 - INFO - test_sample - Testing add with 12 and 21
+2026-03-04 22:35:34,358 - INFO - test_sample - Result obtained: 33
+2026-03-04 22:35:34,361 - ERROR - failure_logger - Test Failed: test_add[12-21-=A12+B12]
+2026-03-04 22:35:34,361 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[12-21-=A12+B12]
+2026-03-04 22:35:34,361 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594BA0A210>, a = 12, b = 21
+expected = '=A12+B12'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 33 == '=A12+B12'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,364 - INFO - test_sample - Testing add with 13 and 22
+2026-03-04 22:35:34,364 - INFO - test_sample - Result obtained: 35
+2026-03-04 22:35:34,366 - ERROR - failure_logger - Test Failed: test_add[13-22-=A13+B13]
+2026-03-04 22:35:34,366 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[13-22-=A13+B13]
+2026-03-04 22:35:34,367 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594BA0AE40>, a = 13, b = 22
+expected = '=A13+B13'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 35 == '=A13+B13'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,372 - INFO - test_sample - Testing add with 14 and 23
+2026-03-04 22:35:34,372 - INFO - test_sample - Result obtained: 37
+2026-03-04 22:35:34,376 - ERROR - failure_logger - Test Failed: test_add[14-23-=A14+B14]
+2026-03-04 22:35:34,376 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[14-23-=A14+B14]
+2026-03-04 22:35:34,376 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B972970>, a = 14, b = 23
+expected = '=A14+B14'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 37 == '=A14+B14'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,380 - INFO - test_sample - Testing add with 15 and 24
+2026-03-04 22:35:34,380 - INFO - test_sample - Result obtained: 39
+2026-03-04 22:35:34,384 - ERROR - failure_logger - Test Failed: test_add[15-24-=A15+B15]
+2026-03-04 22:35:34,384 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[15-24-=A15+B15]
+2026-03-04 22:35:34,384 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B972B30>, a = 15, b = 24
+expected = '=A15+B15'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 39 == '=A15+B15'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,388 - INFO - test_sample - Testing add with 16 and 25
+2026-03-04 22:35:34,388 - INFO - test_sample - Result obtained: 41
+2026-03-04 22:35:34,392 - ERROR - failure_logger - Test Failed: test_add[16-25-=A16+B16]
+2026-03-04 22:35:34,392 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[16-25-=A16+B16]
+2026-03-04 22:35:34,392 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B8DFBA0>, a = 16, b = 25
+expected = '=A16+B16'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 41 == '=A16+B16'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,397 - INFO - test_sample - Testing add with 17 and 26
+2026-03-04 22:35:34,397 - INFO - test_sample - Result obtained: 43
+2026-03-04 22:35:34,402 - ERROR - failure_logger - Test Failed: test_add[17-26-=A17+B17]
+2026-03-04 22:35:34,402 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[17-26-=A17+B17]
+2026-03-04 22:35:34,402 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B78FF50>, a = 17, b = 26
+expected = '=A17+B17'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 43 == '=A17+B17'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:35:34,406 - INFO - test_sample - Testing add with 18 and 27
+2026-03-04 22:35:34,406 - INFO - test_sample - Result obtained: 45
+2026-03-04 22:35:34,409 - ERROR - failure_logger - Test Failed: test_add[18-27-=A18+B18]
+2026-03-04 22:35:34,409 - ERROR - failure_logger - Location: tests/test_sample.py::test_add[18-27-=A18+B18]
+2026-03-04 22:35:34,409 - ERROR - failure_logger - Error: calc = <src.calculator.Calculator object at 0x000001594B9BC050>, a = 18, b = 27
+expected = '=A18+B18'
+
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("a,b,expected", test_data)
+    def test_add(calc,a,b,expected):
+        logger.info(f"Testing add with {a} and {b}")
+        result = calc.add(a, b)
+        logger.info(f"Result obtained: {result}")
+>       assert result == expected
+E       AssertionError: assert 45 == '=A18+B18'
+
+tests\test_sample.py:12: AssertionError
+2026-03-04 22:36:02,426 - INFO - test_sample - Testing add with 2 and 11
+2026-03-04 22:36:02,426 - INFO - test_sample - Result obtained: 13
+2026-03-04 22:36:02,429 - INFO - test_sample - Testing add with 3 and 12
+2026-03-04 22:36:02,429 - INFO - test_sample - Result obtained: 15
+2026-03-04 22:36:02,432 - INFO - test_sample - Testing add with 4 and 13
+2026-03-04 22:36:02,432 - INFO - test_sample - Result obtained: 17
+2026-03-04 22:36:02,435 - INFO - test_sample - Testing add with 5 and 14
+2026-03-04 22:36:02,435 - INFO - test_sample - Result obtained: 19
+2026-03-04 22:36:02,438 - INFO - test_sample - Testing add with 6 and 15
+2026-03-04 22:36:02,438 - INFO - test_sample - Result obtained: 21
+2026-03-04 22:36:02,440 - INFO - test_sample - Testing add with 7 and 16
+2026-03-04 22:36:02,440 - INFO - test_sample - Result obtained: 23
+2026-03-04 22:36:02,444 - INFO - test_sample - Testing add with 8 and 17
+2026-03-04 22:36:02,444 - INFO - test_sample - Result obtained: 25
+2026-03-04 22:36:02,446 - INFO - test_sample - Testing add with 9 and 18
+2026-03-04 22:36:02,447 - INFO - test_sample - Result obtained: 27
+2026-03-04 22:36:02,449 - INFO - test_sample - Testing add with 10 and 19
+2026-03-04 22:36:02,449 - INFO - test_sample - Result obtained: 29
+2026-03-04 22:36:02,452 - INFO - test_sample - Testing add with 11 and 20
+2026-03-04 22:36:02,452 - INFO - test_sample - Result obtained: 31
+2026-03-04 22:36:02,455 - INFO - test_sample - Testing add with 12 and 21
+2026-03-04 22:36:02,455 - INFO - test_sample - Result obtained: 33
+2026-03-04 22:36:02,458 - INFO - test_sample - Testing add with 13 and 22
+2026-03-04 22:36:02,459 - INFO - test_sample - Result obtained: 35
+2026-03-04 22:36:02,462 - INFO - test_sample - Testing add with 14 and 23
+2026-03-04 22:36:02,462 - INFO - test_sample - Result obtained: 37
+2026-03-04 22:36:02,464 - INFO - test_sample - Testing add with 15 and 24
+2026-03-04 22:36:02,464 - INFO - test_sample - Result obtained: 39
+2026-03-04 22:36:02,467 - INFO - test_sample - Testing add with 16 and 25
+2026-03-04 22:36:02,467 - INFO - test_sample - Result obtained: 41
+2026-03-04 22:36:02,470 - INFO - test_sample - Testing add with 17 and 26
+2026-03-04 22:36:02,470 - INFO - test_sample - Result obtained: 43
+2026-03-04 22:36:02,472 - INFO - test_sample - Testing add with 18 and 27
+2026-03-04 22:36:02,472 - INFO - test_sample - Result obtained: 45
