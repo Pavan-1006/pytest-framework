@@ -14,3 +14,6 @@ def test_add(calc,a,b,expected):
 @pytest.mark.regression
 def test_add_multiple(calc):
     assert calc.add(10, 20) == 30
+
+def test_subtract(calc):
+    assert calc.subtract(10, 20) == 30
